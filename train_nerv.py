@@ -32,6 +32,7 @@ def main():
     parser.add_argument('--frame_gap', type=int, default=1, help='frame selection gap')
     parser.add_argument('--augment', type=int, default=0, help='augment frames between frames,  added to suffix!!!!')
     parser.add_argument('--dataset', type=str, default='UVG', help='dataset',)
+    parser.add_argument('--data_path', type=str, default='./data', help='dataset',)
     parser.add_argument('--test_gap', default=1, type=int, help='evaluation gap')
 
 # NERV architecture parameters
@@ -265,8 +266,8 @@ def train(local_rank, args):
     # setup dataloader
     img_transforms = transforms.ToTensor()
     DataSet = CustomDataSet
-    train_data_dir = f'./data/{args.dataset.lower()}'
-    val_data_dir = f'./data/{args.dataset.lower()}'
+    train_data_dir = f'{args.data_path}/{args.dataset.lower()}'
+    val_data_dir = f'{args.data_path}/{args.dataset.lower()}'
 
     train_dataset = DataSet(train_data_dir, img_transforms,vid_list=args.vid, frame_gap=args.frame_gap,  )
     train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset) if args.distributed else None
