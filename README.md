@@ -2,6 +2,19 @@
 ### [Project Page](https://haochen-rye.github.io/NeRV) | [Paper](https://arxiv.org/abs/2110.13903) | [UVG Data](http://ultravideo.fi/#testsequences) 
 
 
+This is a reproduction of the NeRV repository. For more information see our [blogpost](https://hackmd.io/@deeplearning69/SJ2DRG2kC).
+
+The main branch is a package ready to run including the datasets of Big Buck Bunny and Honeybee from UVG.
+If you are only interested in the code, check out the code_only branch.
+
+### Contributors:
+Anton Lang 5110467
+Dielof van Loon 5346894
+David Schep 5643384
+Remi Makinwa 5270677
+
+Now follows the rest of the original readme of the NeRV repository.
+
 [Hao Chen](https://haochen-rye.github.io),
 Bo He,
 Hanyu Wang,
